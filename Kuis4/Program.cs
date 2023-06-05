@@ -2,10 +2,14 @@
 //number1();
 //number2();
 //number3();
-number4();
+//number4();
 //number5();
 //number6();
 //number7();
+//kalkulator();
+//cobaprinthurufR();
+//gambarrumah();
+
 
 
 Console.ReadKey();
@@ -39,7 +43,6 @@ static void number1()
 
     Console.Write("Masukkan golongan (1-4): ");
     int golongan = Convert.ToInt32(Console.ReadLine());
-
     // Menghitung gaji
     int upahPerJam = 0;
     switch (golongan)
@@ -69,6 +72,7 @@ static void number1()
 
     Console.WriteLine("\nTekan sembarang tombol untuk keluar...");
     Console.ReadKey();
+
 }
 
 static void number2()
@@ -216,18 +220,102 @@ static void number5()
 
 static void number7()
 {
-    Console.Write("Masukkan jumlah bilangan Fibonacci yang ingin ditampilkan: ");
-    int n = Convert.ToInt32(Console.ReadLine());
+    //Console.Write("Masukkan jumlah bilangan Fibonacci yang ingin ditampilkan: ");
+    //int n = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine("Deret Fibonacci:");
-    for (int i = 1; i <= n; i++)
+    //Console.WriteLine("Deret Fibonacci:");
+    //for (int i = 1; i <= n; i++)
+    //{
+    //    Console.Write(FibonacciNumber(i));
+    //    if (i != n)
+    //    {
+    //        Console.Write(" ");
+    //    }
+    //}
+    //Console.Write("Masukkan jumlah baris: ");
+    //int jumlahBaris = Convert.ToInt32(Console.ReadLine());
+
+    //Console.Write("Masukkan angka awal: ");
+    //int angkaAwal = Convert.ToInt32(Console.ReadLine());
+
+    //Console.Write("Masukkan angka kedua: ");
+    //int angkaKedua = Convert.ToInt32(Console.ReadLine());
+
+    //Console.WriteLine();
+
+    //Console.Write(angkaAwal + " " + angkaKedua + " ");
+
+    //for (int i = 2; i < jumlahBaris; i++)
+    //{
+    //    int angkaSaatIni = angkaAwal + angkaKedua;
+    //    Console.Write(angkaSaatIni + " ");
+    //    angkaAwal = angkaKedua;
+    //    angkaKedua = angkaSaatIni;
+    //}
+
+    //Console.Write("Masukkan jumlah angka dalam deret Fibonacci: ");
+    //int jumlahAngka = Convert.ToInt32(Console.ReadLine());
+
+    //Console.Write("Masukkan angka awal: ");
+    //int angkaAwal = Convert.ToInt32(Console.ReadLine());
+
+    //Console.Write("Masukkan angka kedua: ");
+    //int angkaKedua = Convert.ToInt32(Console.ReadLine());
+
+    //int[] deretFibonacci = new int[jumlahAngka];
+    //deretFibonacci[0] = angkaAwal;
+    //deretFibonacci[1] = angkaKedua;
+
+    //for (int i = 2; i < jumlahAngka; i++)
+    //{
+    //    deretFibonacci[i] = deretFibonacci[i - 1] + deretFibonacci[i - 2];
+    //}
+
+    //Console.WriteLine("\nDeret Fibonacci:");
+    //for (int i = 0; i < jumlahAngka; i++)
+    //{
+    //    Console.Write(deretFibonacci[i] + " ");
+    //}
+
+    Console.Write("Masukkan jumlah angka dalam deret Fibonacci: ");
+    int jumlahAngka;
+    while (!int.TryParse(Console.ReadLine(), out jumlahAngka))
     {
-        Console.Write(FibonacciNumber(i));
-        if (i != n)
-        {
-            Console.Write(", ");
-        }
+        Console.WriteLine("Input tidak valid. Mohon masukkan angka.");
+        Console.Write("Masukkan jumlah angka dalam deret Fibonacci: ");
     }
+
+    Console.Write("Masukkan angka awal: ");
+    int angkaAwal;
+    while (!int.TryParse(Console.ReadLine(), out angkaAwal))
+    {
+        Console.WriteLine("Input tidak valid. Mohon masukkan angka.");
+        Console.Write("Masukkan angka awal: ");
+    }
+
+    Console.Write("Masukkan angka kedua: ");
+    int angkaKedua;
+    while (!int.TryParse(Console.ReadLine(), out angkaKedua))
+    {
+        Console.WriteLine("Input tidak valid. Mohon masukkan angka.");
+        Console.Write("Masukkan angka kedua: ");
+    }
+
+    int[] deretFibonacci = new int[jumlahAngka];
+    deretFibonacci[0] = angkaAwal;
+    deretFibonacci[1] = angkaKedua;
+
+    for (int i = 2; i < jumlahAngka; i++)
+    {
+        deretFibonacci[i] = deretFibonacci[i - 1] + deretFibonacci[i - 2];
+    }
+
+    Console.WriteLine("\nDeret Fibonacci:");
+    for (int i = 0; i < jumlahAngka; i++)
+    {
+        Console.Write(deretFibonacci[i] + " ");
+    }
+
 }
 
 static int FibonacciNumber(int n)
@@ -250,3 +338,136 @@ static int FibonacciNumber(int n)
         return result;
     }
 }
+
+
+//static void cobaprinthurufR()
+//    {
+//    Console.Write("Masukkan ukuran huruf R: ");
+//    int ukuran = Convert.ToInt32(Console.ReadLine());
+
+//    // Matriks representasi huruf R
+//    string[,] hurufR = new string[ukuran, ukuran];
+
+//    // Mengisi matriks dengan karakter '*'
+//    for (int i = 0; i < ukuran; i++)
+//    {
+//        for (int j = 0; j < ukuran; j++)
+//        {
+//            if (j == 0 || i == 0 || i == ukuran / 2 || (i == j && i >= ukuran / 2))
+//            {
+//                hurufR[i, j] = "*";
+//            }
+//            else
+//            {
+//                hurufR[i, j] = " ";
+//            }
+//        }
+//    }
+
+//    // Mencetak huruf R
+//    for (int i = 0; i < ukuran; i++)
+//    {
+//        for (int j = 0; j < ukuran; j++)
+//        {
+//            Console.Write(hurufR[i, j]);
+//        }
+//        Console.WriteLine();
+//    }
+//}
+
+static void gambarrumah()
+{
+    int tinggi = 7; // Tinggi dari gambar rumah (jumlah baris)
+
+    // Mencetak atap
+    for (int i = 1; i <= tinggi / 2 + 1; i++)
+    {
+        for (int j = 1; j <= tinggi / 2 + 1 - i; j++)
+        {
+            Console.Write(" ");
+        }
+        for (int k = 1; k <= 2 * i - 1; k++)
+        {
+            Console.Write("*");
+        }
+        Console.WriteLine();
+    }
+
+    // Mencetak dinding
+    for (int i = 1; i <= tinggi / 2; i++)
+    {
+        Console.Write("");
+        Console.Write("*");
+        for (int j = 1; j <= tinggi - 2; j++)
+        {
+            Console.Write(" ");
+        }
+        Console.Write("*");
+        Console.WriteLine();
+    }
+
+    // Mencetak alas
+    for (int i = 1; i <= tinggi; i++)
+    {
+        Console.Write("*");
+    }
+
+    Console.WriteLine();
+}
+
+
+static void kalkulator()
+{
+    bool selesai = false;
+
+    while (!selesai)
+    {
+        Console.WriteLine("Masukkan operasi matematika (+, -, *, /) atau 'selesai' untuk keluar:");
+        string operasi = Console.ReadLine();
+
+        if (operasi.ToLower() == "selesai")
+        {
+            selesai = true;
+            continue;
+        }
+
+        Console.WriteLine("Masukkan angka pertama:");
+        double angka1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Masukkan angka kedua:");
+        double angka2 = Convert.ToDouble(Console.ReadLine());
+
+        double hasil = 0;
+
+        switch (operasi)
+        {
+            case "+":
+                hasil = angka1 + angka2;
+                break;
+            case "-":
+                hasil = angka1 - angka2;
+                break;
+            case "*":
+                hasil = angka1 * angka2;
+                break;
+            case "/":
+                if (angka2 != 0)
+                {
+                    hasil = angka1 / angka2;
+                }
+                else
+                {
+                    Console.WriteLine("Pembagian dengan nol tidak diizinkan.");
+                    continue;
+                }
+                break;
+            default:
+                Console.WriteLine("Operasi tidak valid.");
+                continue;
+        }
+
+        Console.WriteLine("Hasil: " + hasil);
+        Console.WriteLine();
+    }
+}
+   

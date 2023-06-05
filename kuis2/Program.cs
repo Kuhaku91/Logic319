@@ -1,5 +1,6 @@
 ﻿//nilai();
-Nomer2();
+//soal5();
+//number3();
 
 Console.ReadKey();
 //static void nilai()
@@ -83,48 +84,48 @@ static double HitungPoinPulsa(double jumlahPulsa)
 
 //class Program
 //{
-//    static void Main()
-//    {
-//        Console.Write("Masukkan total pembelanjaan: ");
-//        double totalPembelanjaan = Convert.ToDouble(Console.ReadLine());
+//static void number3()
+{
+    Console.Write("Masukkan total pembelanjaan: ");
+    double totalPembelanjaan = Convert.ToDouble(Console.ReadLine());
 
-//        Console.Write("Masukkan jarak pengiriman dalam km: ");
-//        int jarakPengiriman = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Masukkan jarak pengiriman dalam km: ");
+    int jarakPengiriman = Convert.ToInt32(Console.ReadLine());
 
-//        double diskon = HitungDiskon(totalPembelanjaan);
-//        double ongkosKirim = HitungOngkosKirim(jarakPengiriman);
+    double diskon = HitungDiskon(totalPembelanjaan);
+    double ongkosKirim = HitungOngkosKirim(jarakPengiriman);
 
-//        double totalPembayaran = totalPembelanjaan - diskon + ongkosKirim;
+    double totalPembayaran = totalPembelanjaan - diskon + ongkosKirim;
 
-//        Console.WriteLine("Total pembayaran: " + totalPembayaran);
-//    }
+    Console.WriteLine("");
+    Console.WriteLine("Total pembayaran: " + totalPembayaran);
+}
 
-//    static double HitungDiskon(double totalPembelanjaan)
-//    {
-//        double diskon = 0;
+static double HitungDiskon(double totalPembelanjaan)
+{
+    double diskon = 0;
 
-//        if (totalPembelanjaan >= 30000)
-//        {
-//            diskon = Math.Min(totalPembelanjaan * 0.4, 30000);
-//        }
+    if (totalPembelanjaan >= 30000)
+    {
+        diskon = Math.Min(totalPembelanjaan * 0.4, 30000);
+    }
 
-//        return diskon;
-//    }
+    return diskon;
+}
 
-//    static double HitungOngkosKirim(int jarakPengiriman)
-//    {
-//        int jarakMin = 5;
-//        int biayaOngkosKirim = 5000;
-//        int tambahanPerKm = 1000;
+static double HitungOngkosKirim(int jarakPengiriman)
+{
+    int jarakMin = 5;
+    int biayaOngkosKirim = 5000;
+    int tambahanPerKm = 1000;
 
-//        int jarakLebih = Math.Max(jarakPengiriman - jarakMin, 0);
-//        double ongkosKirim = biayaOngkosKirim + (tambahanPerKm * jarakLebih);
+    int jarakLebih = Math.Max(jarakPengiriman - jarakMin, 0);
+    double ongkosKirim = biayaOngkosKirim + (tambahanPerKm * jarakLebih);
 
-//        return ongkosKirim;
-//    }
-//}
+    return ongkosKirim;
+}
 
-//}
+
 
 
 static void soal1()
@@ -189,7 +190,7 @@ static void soal6()
     string nama = Console.ReadLine();
     Console.Write("Tunjangan \t : ");
     int tunj = int.Parse(Console.ReadLine());
-    Console.Write("Gapok \t : ");
+    Console.Write("Gaji pokpok \t : ");
     int gap = int.Parse(Console.ReadLine());
     Console.Write("Banyak Bulan \t : ");
     int moon = int.Parse(Console.ReadLine());
@@ -306,10 +307,10 @@ static void soal2()
     else { Console.WriteLine("Beli Pulsa Lagi dan Dapatkan Poinnya"); }
 }
 
-static void soal3()
+static void number3()
 
 {
-    double diskon, belanja, ongkir, total;
+    double diskon = 0, belanja, ongkir, total = 0;
 
     Console.WriteLine("Program Diskon OVO Grab");
     Console.Write("Inputkan Total Belanja \t = ");
@@ -319,38 +320,52 @@ static void soal3()
     Console.Write("Kode Promo \t = ");
     string promo = Console.ReadLine();
 
-    ongkir = jarak * 1000;
+    //ongkir = jarak * 1000;
+    ongkir = jarak <= 5 ? 5000 : jarak * 1000;
     Console.WriteLine();
-    if (shop >= 30000 && shop <= 75000)
+    if (promo.ToUpper() == "JKTOVO" && shop >= 30000)
     {
         diskon = shop * 0.4;
-        belanja = shop - diskon;
-        Console.WriteLine($"Belanja \t : {shop} ");
-        Console.WriteLine($"Diskon 40% \t : {diskon} ");
-        Console.WriteLine($"Ongkir \t \t : {ongkir} ");
-        total = belanja + ongkir;
-        Console.WriteLine($"Total Belanja \t : {total} ");
+        if (diskon > 30000)
+        {
+            diskon = 30000;
+        }
     }
-    else if (shop > 75000)
-    {
-        Console.WriteLine($"Belanja \t : {shop} ");
-        Console.WriteLine($"Diskon 40% \t : 30000 ");
-        Console.WriteLine($"Ongkir \t \t : {ongkir} ");
-        total = (shop - 30000) + ongkir;
-        Console.Write($"Total Belanja \t : {total} ");
-    }
-    else if (shop < 30000)
-    {
-        Console.WriteLine($"Belanja \t : {shop} ");
-        Console.WriteLine($"Diskon 40% \t : No Diskon ");
-        Console.WriteLine($"Ongkir \t \t : {ongkir} ");
-        total = shop + ongkir;
-        Console.WriteLine($"Total Belanja \t : {total} ");
-    }
-    else
-    {
+    Console.WriteLine($"Belanja \t : {shop} ");
+    Console.WriteLine($"Diskon 40% \t : {diskon} ");
+    Console.WriteLine($"Ongkir \t \t : {ongkir} ");
+    Console.WriteLine($"Total Belanja \t : {shop + ongkir - diskon} ");
 
-    }
+    //if (shop >= 30000 && shop <= 75000)
+    //{
+    //    diskon = shop * 0.4;
+    //    belanja = shop - diskon;
+    //    Console.WriteLine($"Belanja \t : {shop} ");
+    //    Console.WriteLine($"Diskon 40% \t : {diskon} ");
+    //    Console.WriteLine($"Ongkir \t \t : {ongkir} ");
+    //    total = belanja + ongkir;
+    //    Console.WriteLine($"Total Belanja \t : {total} ");
+    //}
+    //else if (shop > 75000)
+    //{
+    //    Console.WriteLine($"Belanja \t : {shop} ");
+    //    Console.WriteLine($"Diskon 40% \t : 30000 ");
+    //    Console.WriteLine($"Ongkir \t \t : {ongkir} ");
+    //    total = (shop - 30000) + ongkir;
+    //    Console.Write($"Total Belanja \t : {total} ");
+    //}
+    //else if (shop < 30000 || promo  != "JKTOVO")
+    //{
+    //    Console.WriteLine($"Belanja \t : {shop} ");
+    //    Console.WriteLine($"Diskon 40% \t : No Diskon ");
+    //    Console.WriteLine($"Ongkir \t \t : {ongkir} ");
+    //    total = shop + ongkir;
+    //    Console.WriteLine($"Total Belanja \t : {total} ");
+    //}
+    //else
+    //{
+    //    Console.WriteLine("input yang anda masukan salah");
+    //}
 
 }
 static void soal4()
@@ -406,11 +421,14 @@ static void soal4()
 
 static void soal7()
 {
+    Console.WriteLine("Menghitung Body Mass Index");
+    Console.WriteLine("==========================");
+
     Console.WriteLine("Program Body Mass Index");
-    Console.Write("Masukkan Berat Badan Anda (kg) \t : ");
+    Console.Write("Masukkan Berat Badan Anda (kg)  : ");
     float berat = float.Parse(Console.ReadLine());
 
-    Console.Write("Masukkan Tinggi Badan Anda (cm) \t : ");
+    Console.Write("Masukkan Tinggi Badan Anda (cm)  : ");
     float tinggi = float.Parse(Console.ReadLine());
 
     float bmi, height;
@@ -418,19 +436,19 @@ static void soal7()
 
     bmi = berat / height;
 
-    Console.WriteLine($"Nilai BMI anda adalah \t : {bmi}");
+    Console.WriteLine($"Nilai BMI anda adalah  : {bmi}");
 
     if (bmi < 18.5)
     {
-        Console.WriteLine("Anda Terlalu Kurus");
+        Console.WriteLine("Anda cungkring");
     }
     else if (bmi > 18.5 && bmi < 25)
     {
-        Console.WriteLine("Anda termasuk berbadan Langsing");
+        Console.WriteLine("Anda berbadan Langsing");
     }
     else if (bmi >= 25)
     {
-        Console.WriteLine("Anda Tergolong Gemuk");
+        Console.WriteLine("Sudah waktunya anda diet");
     }
     else
     {
