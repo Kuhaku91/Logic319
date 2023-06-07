@@ -6,6 +6,7 @@
 //number5();
 //number6();
 //number7();
+number8();
 //kalkulator();
 //cobaprinthurufR();
 //gambarrumah();
@@ -470,4 +471,42 @@ static void kalkulator()
         Console.WriteLine();
     }
 }
-   
+
+static void number8()
+{
+    Console.WriteLine(" Nomer 8");
+    Console.WriteLine(" ====== ");
+    
+    Console.Write("Masukan angka: ");
+    int angka = int.Parse(Console.ReadLine());
+
+
+    var x = angka;
+    for (int i = 0; i < angka; i++)
+    {
+        for (int j = 0; j < angka; j++)
+        {
+            if (i == 0)
+            {
+                Console.Write($"{j + 1}\t");
+
+            }
+            else if (i == angka - 1)
+            {
+                //x -= 1;
+                Console.Write($"{x}\t");
+                x -= 1;
+            }
+            else if (j == 0 || j == angka - 1)
+            {
+                Console.Write($"*\t");
+            }
+            else
+            {
+                Console.Write($"\t");
+            }
+        }
+        Console.WriteLine();
+
+    }
+}

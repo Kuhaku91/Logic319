@@ -1,0 +1,15 @@
+C:\Users\XSIS User\source\repos\Logic03\kuis5\bin\Debug\net6.0\kuis5.exe
+C:\Users\XSIS User\source\repos\Logic03\kuis5\bin\Debug\net6.0\kuis5.deps.json
+C:\Users\XSIS User\source\repos\Logic03\kuis5\bin\Debug\net6.0\kuis5.runtimeconfig.json
+C:\Users\XSIS User\source\repos\Logic03\kuis5\bin\Debug\net6.0\kuis5.dll
+C:\Users\XSIS User\source\repos\Logic03\kuis5\bin\Debug\net6.0\kuis5.pdb
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.csproj.AssemblyReference.cache
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.AssemblyInfoInputs.cache
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.AssemblyInfo.cs
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.csproj.CoreCompileInputs.cache
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.dll
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\refint\kuis5.dll
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.pdb
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\kuis5.genruntimeconfig.cache
+C:\Users\XSIS User\source\repos\Logic03\kuis5\obj\Debug\net6.0\ref\kuis5.dll
