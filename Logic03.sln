@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic5", "Logic5\Logic5.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic06", "Logic06\Logic06.csproj", "{A24ED2C4-6E80-45C1-B790-A1248BB3E528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kuis5", "kuis5\kuis5.csproj", "{DBD8DD2B-6B06-4EDD-8732-0812FC3BCBCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kuis5", "kuis5\kuis5.csproj", "{DBD8DD2B-6B06-4EDD-8732-0812FC3BCBCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kuis7", "kuis7\kuis7.csproj", "{B3082FF8-7732-43E3-9F4C-BBCB5A1F41B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{DBD8DD2B-6B06-4EDD-8732-0812FC3BCBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBD8DD2B-6B06-4EDD-8732-0812FC3BCBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBD8DD2B-6B06-4EDD-8732-0812FC3BCBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3082FF8-7732-43E3-9F4C-BBCB5A1F41B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3082FF8-7732-43E3-9F4C-BBCB5A1F41B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3082FF8-7732-43E3-9F4C-BBCB5A1F41B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3082FF8-7732-43E3-9F4C-BBCB5A1F41B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
